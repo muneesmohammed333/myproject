@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: muneesmohammed333/mylogoproject   # replace with your GitHub repo
+  repo: muneesmohammed333/myproject   # 🔹 Your GitHub repo
   branch: main
 
-media_folder: "images/uploads"    # uploaded files inside repo
-public_folder: "/images/uploads"  # accessible path for website
+media_folder: "images/uploads"        # where uploaded images are stored
+public_folder: "/images/uploads"      # public path
 
 collections:
   - name: "pages"
@@ -16,3 +16,15 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "posts"                   # folder where new blog posts are stored
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
