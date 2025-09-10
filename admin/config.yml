@@ -1,9 +1,10 @@
 backend:
-  name: git-gateway
-  branch: main   # the branch you deploy from
+  name: github
+  repo: muneesmohammed333/mylogoproject   # replace with your GitHub repo
+  branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads"    # uploaded files inside repo
+public_folder: "/images/uploads"  # accessible path for website
 
 collections:
   - name: "pages"
